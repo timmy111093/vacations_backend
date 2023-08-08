@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "start": "nodemon --exec ts-node src/app.ts"
-
   },
   "keywords": [],
   "author": "",

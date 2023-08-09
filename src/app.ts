@@ -23,6 +23,7 @@ server.use(expressFileUpload());
 // tell express to take the json  in requests body and attache it to the body object
 server.use(express.json());
 
+server.use('/',vacationController);
 server.use('/api', authcontroller);
 server.use('/api', vacationController);
 server.use('/api',followersController);
@@ -37,5 +38,5 @@ server.use(catchAll);
 
 // running the server on a port
 server.listen(process.env.PORT, () => {
-      console.log(`listening on localhost:${process.env.PORT}...`);
+      console.log(`listening on ${process.env.DB_HOST}:${process.env.PORT}.....`);
 });

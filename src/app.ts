@@ -24,7 +24,7 @@ server.use(expressFileUpload());
 server.use(express.json());
 
 server.use('/api', authcontroller);
-server.use('/vacations-backend-new1.onrender.com', vacationController);
+server.use('/api', vacationController);
 server.use('/api',followersController);
 
 

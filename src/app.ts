@@ -21,6 +21,7 @@ server.use(expressFileUpload());
 // tell express to take the json  in requests body and attache it to the body object
 server.use(express.json());
 
+server.use('/', authcontroller);
 server.use('/api', authcontroller);
 server.use('/api', vacationController);
 server.use('/api',followersController);

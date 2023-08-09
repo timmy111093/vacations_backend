@@ -11,9 +11,7 @@ import followersController from './controllers/followers-controller';
 // create a server
 const server = express();
 
-server.use(cors({
-      origin: process.env.frontEndUrl
-}));
+server.use(cors());
 
 server.use(logReuest);
 

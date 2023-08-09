@@ -8,7 +8,7 @@ import verifyAdmin from '../3. middleware/verifyAdmin';
 const router = express.Router();
 
 // get vacations by limit and offset
-router.get(`/vacations-backend-new1.onrender.com//:page([0-9]+)`,verifyLoggedIn, async (req:Request,res:Response) => {
+router.get(`/vacations-backend-new1.onrender.com/:page([0-9]+)`,verifyLoggedIn, async (req:Request,res:Response) => {
       const page = +req.params.page;
       const vacations = await vacationLogic.getAllVacations(page);
       res.json(vacations);
